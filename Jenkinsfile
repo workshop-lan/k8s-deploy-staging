@@ -21,6 +21,9 @@ pipeline {
   agent {
     label 'kubegit'
   }
+  options {
+    disableConcurrentBuilds()
+  }
   stages {
     stage('Update Deployment and Service specification') {
       steps {
